@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JR TECH INC</title>
+  <link rel="stylesheet" href="/styles/main.css">
+  <script type="module" src="C://Users/jagje/Downloads/6.1+Blog+API+Project/firebase.js"></script>
+  <script type="module" src="C://Users/jagje/Downloads/6.1+Blog+API+Project/firebase-auth.js"></script>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo-link"></div> <!-- Logo -->
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/new">New Post</a></li>
+      <li><a href="/signup">Sign Up</a></li>
+    </ul>
+  </nav>
+
+  <!-- Video Background Section -->
+  <div class="video-background">
+    <video autoplay loop muted playsinline>
+      <source src="/styles/videos/video3.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- Content Over Video -->
+    <div class="content">
+      <div class="container">
+        <h1>My Blog</h1>
+        <a id="newPostBtn" href="/new">New Post</a>
+
+        <ul id="postsList">
+          <% posts.forEach(post => { %>
+            <li>
+              <h2><%= post.title %></h2>
+              <small><%= post.date %></small>
+              <p><%= post.content %></p>
+              <small>By: <%= post.author %></small>
+              <div>
+                <a class="edit" href="/edit/<%= post.id %>">Edit</a>
+                <a class="delete" href="/api/posts/delete/<%= post.id %>">Delete</a>
+              </div>
+            </li>
+          <% }); %>
+        </ul>
+
+        <!-- Google Sign-In Button -->
+        <!-- <button id="googleSignInBtn">Sign in with Google</button> -->
+        
+        <!-- Issue Help Box -->
+        <div class="help-section">
+          <h2>Contact Us!</h2>
+          <form id="issueForm" action="/api/issues" method="POST">
+            <textarea name="issue" placeholder="Describe your issue here..." required></textarea>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2024 JR TECH INC. All rights reserved.</p>
+    <ul class="footer-links">
+      <li><a href="/privacy">Privacy Policy</a></li>
+      <li><a href="/terms">Terms of Service</a></li>
+    </ul>
+  </footer>
+
+</body>
+
+</html>

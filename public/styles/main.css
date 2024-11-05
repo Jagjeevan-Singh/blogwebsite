@@ -1,0 +1,317 @@
+/* Body and Text Styling */
+body,
+h1,
+h2,
+p,
+ul,
+li,
+form,
+input,
+textarea,
+a {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-family: "Arial", sans-serif; /* Consistent font */
+}
+
+body {
+  background-color: #f7f9fc; /* Light background */
+  color: #333; /* Dark text */
+  line-height: 1.6; /* Line height for readability */
+}
+
+/* Container for the content */
+.container {
+  max-width: 800px; /* Maximum width for the container */
+  margin: 50px auto; /* Center the container */
+  background-color: #fff; /* White background */
+  padding: 30px; /* Increased padding for container */
+  border-radius: 10px; /* More rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Help Section Styling */
+.help-section {
+  background-color: #f9f9f9; /* Light background for the help box */
+  padding: 30px; /* Increased padding */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 10px; /* More rounded corners */
+  margin: 30px 0; /* Increased margin for separation */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  overflow: auto; /* Ensures the box can expand or scroll if needed */
+}
+
+.help-section h2 {
+  font-size: 1.8em; /* Increased heading size */
+  margin-bottom: 15px; /* Space below heading */
+  color: #333; /* Darker color for contrast */
+  text-align: center; /* Center the heading */
+}
+
+.help-section textarea {
+  width: 100%; /* Full width */
+  height: 120px; /* Increased height of the textarea */
+  padding: 15px; /* Increased padding */
+  border: 1px solid #ddd; /* Border around the textarea */
+  border-radius: 5px; /* More rounded corners */
+  outline: none; /* Remove outline on focus */
+  transition: border 0.3s; /* Smooth transition for border */
+  resize: vertical; /* Allow vertical resizing of the textarea */
+}
+
+.help-section textarea:focus {
+  border-color: #007bff; /* Change border color on focus */
+}
+
+.help-section button {
+  background-color: #007bff; /* Button color */
+  color: white; /* Text color */
+  padding: 12px 20px; /* Padding around button text */
+  border: none; /* Remove border */
+  border-radius: 5px; /* More rounded corners */
+  cursor: pointer; /* Change cursor to pointer */
+  font-size: 1em; /* Font size */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+  display: block; /* Block display for full width */
+  width: 100%; /* Full width */
+  margin-top: 15px; /* Space above the button */
+}
+
+.help-section button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Google Sign-In Button Styling */
+#googleSignInBtn {
+  background-color: #4285f4; /* Google Blue */
+  color: white; /* White text */
+  padding: 12px 20px; /* Increased padding for button */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  font-size: 1em; /* Font size */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+  margin: 20px 0; /* Margin for spacing */
+  display: block; /* Block for full width */
+  width: 100%; /* Full width */
+}
+
+#googleSignInBtn:hover {
+  background-color: #357ae8; /* Darker blue on hover */
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Video Background */
+.video-background {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-background video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1; /* Behind the content */
+  transform: translate(-50%, -50%);
+}
+
+.content {
+  position: relative;
+  z-index: 1; /* In front of the video */
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background-color: rgba(0, 0, 0, 0.9); /* Slightly darker for better visibility */
+}
+
+/* Logo Styling */
+.logo-link {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-image: url('images/image1.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Navigation Links Styling */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s; /* Smooth transition for color */
+}
+
+.nav-links a:hover {
+  color: #ddd; /* Change color on hover */
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #000000; /* Dark background */
+  color: white; /* White text */
+  text-align: center; /* Center text */
+  padding: 20px 0; /* Padding for top and bottom */
+  position: relative; /* Position relative for potential positioning */
+  bottom: 0; /* Position at the bottom */
+  width: 100%; /* Full width */
+}
+
+.footer-links {
+  list-style: none; /* Remove bullet points */
+  padding: 0; /* Remove padding */
+  margin: 10px 0 0; /* Margin on top */
+  display: flex; /* Use flex for layout */
+  justify-content: center; /* Center links */
+}
+
+.footer-links li {
+  margin: 0 15px; /* Spacing between links */
+}
+
+.footer-links a {
+  color: white; /* White text */
+  text-decoration: none; /* Remove underline */
+  transition: text-decoration 0.3s; /* Smooth transition for underline */
+}
+
+.footer-links a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Headings */
+h1 {
+  font-size: 2.5em; /* Heading size */
+  margin-bottom: 20px; /* Space below heading */
+  color: #444; /* Darker heading color */
+}
+
+h2 {
+  font-size: 1.6em; /* Subheading size */
+  margin-bottom: 15px; /* Space below subheading */
+  color: #555; /* Slightly lighter color */
+}
+
+/* Paragraphs and Inputs */
+p,
+input,
+textarea {
+  margin-bottom: 20px; /* Space below paragraphs and inputs */
+}
+
+small {
+  display: block; /* Block element */
+  margin-bottom: 20px; /* Space below */
+  color: #888; /* Lighter text */
+}
+
+/* Form Elements */
+input,
+textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Increased padding */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 5px; /* More rounded corners */
+  font-size: 1em; /* Font size */
+  outline: none; /* Remove outline */
+  transition: border 0.3s; /* Transition for focus */
+}
+
+input:focus,
+textarea:focus {
+  border-color: #007bff; /* Blue border on focus */
+}
+
+/* Buttons and Links */
+a,
+button {
+  text-decoration: none; /* No underline */
+  background-color: #007bff; /* Primary button color */
+  color: #fff; /* White text */
+  padding: 10px 15px; /* Padding for buttons */
+  font-size: 1em; /* Font size */
+  border: none; /* No border */
+  border-radius: 5px; /* More rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s, transform 0.2s; /* Transition for background color */
+}
+
+button.full-width {
+  display: block; /* Full width button */
+  text-align: center; /* Center text */
+  width: 100%; /* Full width */
+}
+
+a:hover,
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* List Styling */
+ul {
+  list-style-type: none; /* No bullets for lists */
+}
+
+li {
+  padding: 20px 0; /* Space in list items */
+  border-bottom: 1px solid #eee; /* Light bottom border */
+}
+
+li:last-child {
+  border-bottom: none; /* Remove border from last item */
+}
+
+/* Edit and Delete Links */
+a.edit {
+  background-color: #007bff; /* Blue for edit links */
+  padding: 8px 12px; /* Padding for buttons */
+}
+
+a.delete {
+  background-color: #e74c3c; /* Red for delete links */
+  padding: 8px 12px; /* Padding for buttons */
+}
+
+a.delete:hover {
+  background-color: #c0392b; /* Darker red on hover */
+}
+
+/* New Post Button */
+#newPostBtn {
+  margin: 20px 0; /* Margin for the button */
+  background-color: #2ecc71; /* Green button */
+  padding: 12px 20px; /* Increased padding for button */
+  font-size: 1em; /* Font size */
+  border-radius: 5px; /* More rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s, transform 0.2s; /* Transition for background color */
+  border: none; /* No border */
+  color: #fff; /* White text */
+  text-align: center; /* Center text */
+  text-decoration: none; /* No underline */
+}
+
+#newPostBtn:hover {
+  background-color: #27ae60; /* Darker green on hover */
+  transform: translateY(-2px); /* Lift effect on hover */
+}
